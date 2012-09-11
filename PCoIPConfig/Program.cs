@@ -12,6 +12,7 @@ namespace PCoIPConfig
         public static RegistryKey Configuration;
         public static RegistryKey Profiles;
         public static RegistryKey PCoIPAdmin;
+        public static RegistryKey VolatileEnv;
         public static ProfileEditorForm profileEditorForm;
         public static Dictionary<String, String[]> defaultProfiles;
         /// <summary>
@@ -72,6 +73,13 @@ namespace PCoIPConfig
                 PCoIPAdmin = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Policies\\Teradici\\PCoIP\\pcoip_admin_defaults");
             }
 
+            // Get a handle to the volatile registry area so we can detect if a session is connected or not
+            VolatileEnv = Registry.CurrentUser.OpenSubKey("Volatile Environment", false);
+            if (VolatileEnv == null)
+            {
+                MessageBox.Show("No Volatile Environment found!\nAre you sure the View Agent is installed?\nThis application will now close!");
+                Application.Exit();
+            }
         }
 
         public static void populateDefaultProfiles() {

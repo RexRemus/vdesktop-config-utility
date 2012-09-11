@@ -42,6 +42,11 @@ namespace PCoIPConfig
             audioBandwidthLabel.Text = string.Format("{0:n}/{1:n}", stats.getAudioTxBW(), stats.getAudioTxBWPeak());
         }
 
+        public void WMIStats(WMIStats stats)
+        {
+            this.stats = stats;
+        }
+
         public void updateWMIStats()
         {
             //TODO Put formatting operations here - move polling out to Form1.cs with a call to this method

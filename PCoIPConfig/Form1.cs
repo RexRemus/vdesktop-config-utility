@@ -19,6 +19,7 @@ namespace PCoIPConfig
         HealthMeterForm healthForm;
         ToolStripMenuItem activeProfile;
         bool CloseApp = false;
+        bool sessionConnected = false;
         WMIStats stats;
         int latencySampleCnt = 5;
         Queue<double> latencySamples = new Queue<double>();
@@ -47,16 +48,37 @@ namespace PCoIPConfig
             WMITimer.Elapsed += new ElapsedEventHandler(pollWMIStats);
             //WMITimer.Disposed += new EventHandler(OurTimerDisposed);
             WMITimer.Interval = 1000;
+
             stats = new WMIStats(WMITimer.Interval); // create a new WMIstats object before we start
             sessionStatsForm = new SessionStatsForm(stats);
-            WMITimer.Start(); // kick off the timer
 
             healthForm = new HealthMeterForm();
             healthForm.SetMaxScore(4.00d);
+
+            WMITimer.Start(); // kick off the timer
         }
 
         private void pollWMIStats(object source, ElapsedEventArgs e)
         {
+            // If we are not connected we shouldn't poll for new stats, check for that here
+            if (!IsClientConnected())
+            {
+                sessionConnected = false;
+                // Increase the polling interval - no sense in wasting CPU until there is a connection again
+                if (WMITimer.Interval != 3000) WMITimer.Interval = 3000; // only check for connection every 3 seconds
+                return;
+            }
+            else
+            {
+                if (sessionConnected == false) // If we're coming here for the first time after being disconnected
+                {
+                    stats = new WMIStats(WMITimer.Interval); // create a new WMIstats object
+                    sessionStatsForm.WMIStats(stats); // Update the stats form with the new object
+                    WMITimer.Interval = 1000; // reset the timer back to 1 second polls
+                    sessionConnected = true;
+                }
+            }
+
             stats.collectWMIStats(); // poll for new stats
             sessionStatsForm.updateStats(); // update the stats window
 
@@ -124,6 +146,16 @@ namespace PCoIPConfig
             }
             lastIcon = systrayIcon.Icon;
             currentHealthState = healthState;
+        }
+
+        private Boolean IsClientConnected()
+        {
+            /* Here we simply check for the existence of a client IP address in the volatile registry area
+             * If a client is connected this value will EXIST, if not it is not present - note we don't
+             * care about the value of the subkey, just that it is present, or not.
+             */
+            String ip = (String) Program.VolatileEnv.GetValue("ViewClient_IP_Address");
+            return ip == null ? false : true;
         }
 
         private double CalculateVariance(Queue<double> input)
