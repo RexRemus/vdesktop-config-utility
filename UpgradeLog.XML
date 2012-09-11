@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PCoIPConfig">
+</Property><Property Name="Solution File" Value="D:\Visual Studio 2008 Projects\PCoIPConfig\PCoIPConfig.sln">
+</Property><Property Name="User Options File" Value="D:\Visual Studio 2008 Projects\PCoIPConfig\PCoIPConfig.suo">
+</Property><Property Name="Date" Value="Thursday, February 09, 2012">
+</Property><Property Name="Time" Value="10:07 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="PCoIPConfig.sln" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig.sln">
+</Event><Event ErrorLevel="0" Project="" Source="PCoIPConfig.suo" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig.suo">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\PCoIPConfig.csproj" Description="Project file successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\PCoIPConfig.csproj">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\PCoIPConfig.csproj.user" Description="Project user file successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\PCoIPConfig.csproj.user">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Form1.cs" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Form1.cs">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Form1.Designer.cs" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Program.cs" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Program.cs">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Properties\Resources.Designer.cs" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Properties\Settings.Designer.cs" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\SessionStatsForm.cs" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\SessionStatsForm.cs">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\SessionStatsForm.Designer.cs" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\SessionStatsForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Properties\Settings.settings" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Properties\app.manifest" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Properties\app.manifest">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Resources\view_client_icon.ico" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Resources\view_client_icon.ico">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Form1.resx" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Form1.resx">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\Properties\Resources.resx" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\SessionStatsForm.resx" Description="File successfully backed up as D:\Visual Studio 2008 Projects\PCoIPConfig\Backup\PCoIPConfig\SessionStatsForm.resx">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\PCoIPConfig.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PCoIPConfig" Source="PCoIPConfig\PCoIPConfig.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="PCoIPConfig.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="PCoIPConfig.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PCoIPConfig" Source="PCoIPConfig\PCoIPConfig.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
