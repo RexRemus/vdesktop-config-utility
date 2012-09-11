@@ -138,7 +138,45 @@ namespace PCoIPConfig
             int n = input.Count;
             return ((n * sumOfSquares) - Math.Pow(total, 2)) / (n * (n - 1));
         }
-        
+
+        public string GetProfileTooltipText(string profileName)
+        {
+            string tooltip = "Profile Settings:\n";
+
+            String[] settings = (String[])Program.Profiles.GetValue(profileName);
+            for (int i = 0; i < settings.Length; i++)
+            {
+                //Lookup a friendly name for each setting
+                switch (settings[i])
+                {
+                    case "pcoip.maximum_frame_rate":
+                        tooltip += "  Max FPS:\t" + settings[++i] + "\n";
+                    break;
+                    case "pcoip.minimum_image_quality":
+                    tooltip += "  Min Img Qual:\t" + settings[++i] + "%\n";
+                    break;
+                    case "pcoip.maximum_initial_image_quality":
+                    tooltip += "  Max Init Qual:\t" + settings[++i] + "%\n";
+                    break;
+                    case "pcoip.enable_build_to_lossless":
+                    tooltip += "  BTL:\t\t" + (settings[++i].Equals("0") ? "No" : "Yes") + "\n";
+                    break;
+                    case "pcoip.audio_bandwidth_limit":
+                    tooltip += "  Max Audio B/W:\t" + settings[++i] + "Kb\n";
+                    break;
+                    case "pcoip.max_link_rate":
+                    tooltip += "  Max Sess. B/W:\t" + settings[++i] + "Kb\n";
+                    break;
+                    case "pcoip.device_bandwidth_floor":
+                    tooltip += "  Sess. B/W Floor:\t" + settings[++i] + "Kb\n";
+                    break;
+
+                }
+            }
+
+            return tooltip;
+        }
+
         public void UpdateProfileMenu()
         {
             activateProfileToolStripMenuItem.DropDownItems.Clear();
@@ -150,7 +188,7 @@ namespace PCoIPConfig
                 profile.Text = profileName;
                 profile.CheckOnClick = true;
                 profile.Click += new EventHandler(profileSelected);
-                profile.ToolTipText = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789";
+                profile.ToolTipText = GetProfileTooltipText(profileName);
                 if ( activeProfile != null && activeProfile.Name.Equals(profileName) ) profile.Checked = true; // Select the profile if it's currently active
                 activateProfileToolStripMenuItem.DropDownItems.Add(profile);
             }
